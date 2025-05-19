@@ -20,3 +20,5 @@ jobs: # This is must
         run: ls -la
       - name: Check Polindrome
         run: python3 python.py
+      - name: Show Israel time (bash script)
+        run: ./time_in_israel.sh
