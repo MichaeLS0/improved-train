@@ -14,3 +14,5 @@ jobs: # This is must
         uses: actions/checkout@v3
       - name: Print Hello
         run: echo "Shalom"
+      - name: Build Version
+        run: Docker -v  
