@@ -1,0 +1,20 @@
+name: Build and Push Docker Image
+
+on: # What will be the action from the developer(the trigger)
+  push: # git push
+    branches:
+      - main  # Change this if you're using a different branch
+
+jobs: # This is must
+  simple-job: # The name of the job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Print Hello
+        run: echo "Shalom"
+      - name: Docker Version
+        run: docker -v
+      - name: Docker Build
+        run: docker build -t python:1.0 . 
