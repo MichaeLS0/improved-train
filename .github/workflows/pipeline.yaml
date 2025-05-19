@@ -18,3 +18,5 @@ jobs: # This is must
         run: docker -v  
       - name: Using ls 
         run: ls -la
+      - name: Check Polindrome
+        run: python3 python.py
