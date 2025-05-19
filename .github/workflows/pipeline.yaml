@@ -21,11 +21,11 @@ jobs: # This is must
       - name: Welcome
         run: python3 app.py
       - name: Docker Build
-        run: docker build -t myapp:latest .
+        run: docker build -t mlchaels/myapp:latest .
       - name: Docker Login
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Docker Push
-        run: docker push myapp:latest
+        run: docker push mlchaels/myapp:latest
 
   build-and-push:
     runs-on: ubuntu-latest
