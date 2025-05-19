@@ -23,10 +23,10 @@ jobs: # This is must
       - name: Docker Build
         run: docker build -t myapp:latest .
       - name: Docker Login
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Docker Push
         run: docker push myapp:latest
-        
+
   build-and-push:
     runs-on: ubuntu-latest
 
