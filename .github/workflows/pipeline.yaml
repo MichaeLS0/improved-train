@@ -21,4 +21,4 @@ jobs: # This is must
       - name: Check Polindrome
         run: python3 python.py
       - name: Show Israel time (bash script)
-        run: ./time_in_israel.sh
+        run: time_in_israel.sh
