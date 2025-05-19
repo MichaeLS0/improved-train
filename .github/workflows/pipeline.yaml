@@ -16,3 +16,5 @@ jobs: # This is must
         run: echo "Shalom"
       - name: Build Version
         run: docker -v  
+      - name: Using ls 
+        run: ls -la
